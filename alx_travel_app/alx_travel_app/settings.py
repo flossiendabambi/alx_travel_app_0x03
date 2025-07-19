@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'your_db_name',
-        'USER': 'your_username',
-        'PASSWORD': 'your_password',
-        'HOST': '127.0.0.1',
+        'NAME': 'flossiendabambi$default',
+        'USER': 'flossiendabambi',
+        'PASSWORD': 'xB!QFg!rRv5tbN@',
+        'HOST': 'flossiendabambi.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
