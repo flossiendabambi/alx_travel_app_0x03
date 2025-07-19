@@ -10,6 +10,9 @@ from .serializers import ListingSerializer, BookingSerializer, PaymentSerializer
 from django.http import JsonResponse
 from .tasks import send_booking_confirmation_email
 
+def welcome(request):
+    return render(request, 'welcome.html')
+
 
 class ListingViewSet(viewsets.ModelViewSet):
     serializer_class = ListingSerializer
