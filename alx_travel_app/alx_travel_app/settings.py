@@ -77,9 +77,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
 
-# Database (Heroku overrides with DATABASE_URL if set)
 DATABASES = {
-    'default': dj_database_url.config(default=f"mysql://{env('DB_USER')}:{env('DB_PASSWORD')}@{env('DB_HOST')}:{env('DB_PORT')}/{env('DB_NAME')}")
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_db_name',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
 }
 
 # Celery settings
