@@ -13,7 +13,6 @@ import os
 from pathlib import Path
 import environ
 import dj_database_url
-import django_heroku
 from dotenv import load_dotenv
 
 # Base directory
@@ -28,7 +27,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-...')
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['*']  # OR specific domain(s) like ['your-app.herokuapp.com']
+ALLOWED_HOSTS = ['flossiendabambi.pythonanywhere.com']
+
 
 # Installed apps
 INSTALLED_APPS = [
@@ -119,6 +119,3 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 # Chapa
 CHAPA_SECRET_KEY = os.getenv("CHAPA_SECRET_KEY")
-
-# Activate Django-Heroku (must be last line)
-django_heroku.settings(locals())
